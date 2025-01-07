@@ -1,6 +1,6 @@
 # Use the official Apache Airflow image
-# FROM apache/airflow:2.7.1
-FROM apache/airflow:2.7.2-python3.9
+FROM apache/airflow:2.7.1
+# FROM apache/airflow:2.7.2-python3.9
 
 # Switch to root user to install dependencies
 USER root
