@@ -1,6 +1,6 @@
 # Use the official Apache Airflow image
-# FROM apache/airflow:2.7.1
-FROM apache/airflow:2.7.2-python3.9
+FROM apache/airflow:2.7.1
+# FROM apache/airflow:2.7.2-python3.9
 
 # Switch to root user to install dependencies
 USER root
@@ -52,5 +52,7 @@ EXPOSE 8080
 USER airflow
 
 # Use the airflow standalone command to initialize the database, create an admin user, and start the webserver and scheduler
-CMD ["bash", "-c", "airflow db upgrade && airflow webserver --port 8080 --host 0.0.0.0"]
+# CMD ["bash", "-c", "airflow db upgrade && airflow webserver --port 8080 --host 0.0.0.0"]
+CMD ["bash", "-c", "airflow webserver --port 8080 --host 0.0.0.0"]
+
 
